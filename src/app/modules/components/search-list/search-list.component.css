@@ -1,0 +1,19 @@
+
+.music-list{
+    list-style-type: none;
+}
+
+.music-item .music-item-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.music-item .music-item-info img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}

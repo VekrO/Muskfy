@@ -1,0 +1,26 @@
+<div class="music-info">
+
+    <div class="box music-controls">
+        <button (click)="previous()"><i class="ri-skip-left-fill"></i></button>
+        <button (click)="play()"><i class="ri-{{ playing ? 'pause' : 'play'}}-fill"></i></button>
+        <button (click)="next()"><i class="ri-skip-right-fill"></i></button>
+
+        <span class="timer">{{ minutes }}:{{ seconds | number:'2.0' }} / {{ maxMinutes }}:{{ maxSeconds | number:'2.0' }}</span>
+
+    </div>
+
+    <div *ngIf="song" class="box music-info-header">
+        <img class="music-info-image" src="{{ song.thumbnail[0].url }}" alt="" srcset="">
+        <h3 class="music-info-title">{{ song.snippet.channelTitle }}</h3>
+    </div>
+
+    <div class="box music-options">
+        <input type="range" (input)="handleVolume($event)">
+    </div>
+    
+</div>
+
+<audio id="player">
+    <source src="" type="audio/mp3">
+    Seu navegador não suporta a reprodução de áudio.
+</audio>

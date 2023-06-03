@@ -1,0 +1,5 @@
+<ul class="music-list" *ngIf="songs">
+    <li *ngFor="let song of songs; let i = index;" class="music-item">
+        <app-music-card [song]="song" [listening]="listeningStates[i]"></app-music-card>
+    </li>
+</ul>
